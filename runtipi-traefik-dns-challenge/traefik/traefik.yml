@@ -1,0 +1,37 @@
+api:
+  dashboard: true
+  insecure: true
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    watch: true
+    exposedByDefault: false
+  file:
+    directory: /etc/traefik/dynamic
+    watch: true
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+    http:
+      tls:
+        certResolver: myresolver
+
+certificatesResolvers:
+  myresolver:
+    acme:
+      email: email@example.com
+      storage: /shared/acme.json
+      dnsChallenge:
+        provider: cloudflare
+        delayBeforeCheck: 0
+log:
+  level: DEBUG
+
+http:
+  routers:
+    subdomain:
+      rule: "Host(`example.com`) || Host(`*.example.com`)"
