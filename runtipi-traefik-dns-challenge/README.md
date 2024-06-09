@@ -1,9 +1,9 @@
 ## Runtipi Traefik DNS Challenge
 
-Simply make the changes to the files I have here. Then start/restart tipi with the `--env-file` flag set to `.env.local`. Here is an exmaple:
+Simply make the changes to the files I have here. Then restart tipi.
 
 ```Bash
-sudo ./runtipi-cli start --env-file ./.env.local
+sudo ./runtipi-cli restart
 ```
 
 After that traefik should automatically generate certificates for the domains. Make sure you have a domain configured in settings though.

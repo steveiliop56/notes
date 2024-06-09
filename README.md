@@ -5,3 +5,4 @@ A simple notes repository holding all kinds of different tweaks/settings to mike
 ### Contents
 
 - [Runtipi Traefik DNS Challenge](runtipi-traefik-dns-challenge/README.md)
+- [Easy Gadget Script](easy-gadget/README.md)

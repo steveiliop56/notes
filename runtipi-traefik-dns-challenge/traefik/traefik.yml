@@ -28,10 +28,6 @@ certificatesResolvers:
       dnsChallenge:
         provider: cloudflare
         delayBeforeCheck: 0
-log:
-  level: DEBUG
 
-http:
-  routers:
-    subdomain:
-      rule: "Host(`example.com`) || Host(`*.example.com`)"
+log:
+  level: ERROR
