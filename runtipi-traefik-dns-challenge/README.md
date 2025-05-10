@@ -1,6 +1,6 @@
 ## Runtipi Traefik DNS Challenge
 
-Simply make the changes to the files I have here. Then restart tipi.
+Simply make the changes to the files I have here. Then restart runtipi.
 
 ```Bash
 sudo ./runtipi-cli restart

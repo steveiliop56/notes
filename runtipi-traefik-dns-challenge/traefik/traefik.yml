@@ -27,7 +27,6 @@ certificatesResolvers:
       storage: /shared/acme.json
       dnsChallenge:
         provider: cloudflare
-        delayBeforeCheck: 0
 
 log:
   level: ERROR
